@@ -23,7 +23,28 @@ public class GestorCheques
 		miCCheques.getItems().add(miCheque);
 		
 		
+		
 			
 	}
 	
+	public void registraDesembolsoCheque(Cuenta ccheques,String cuentaCheques, String nomCheque) {
+		this.miCCheques = ccheques;
+		
+		
+		
+	}
+	
+	public void realizaCheque(Cuenta ccheques, String cuentaCheques, String nomCheque) {
+		this.miCCheques = ccheques; 
+		int miId = miCCheques.getItems().size()+1;
+		miCheque = new Cheque(miId, nomCheque , "devuelto", "14-11-2020");
+		miCheque.agregaNotaDebito(nomCheque);
+		miCCheques.getItems().add(miCheque);
+		
+		
+	}
+	
+	
+	
+
 }

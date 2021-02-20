@@ -20,30 +20,38 @@ public class Principal {
 		Requisicion requisicion=null;
 		//Factura factura=null;
 		Cheque cheque=null;
-
-		Gestor contabilidad = new Gestor("C:\\Users\\wenty\\Examen1\\Examen1-AS-master\\contabilidadUIA\\ListaProveedores.json");		
+		
+		
+		Gestor contabilidad = new Gestor("C:\\Users\\wenty\\Examen1\\Examen1-AS-master\\contabilidadUIA\\ListaProveedores.json");
+		
 		 DecoradorProveedores gestorProveedores = new DecoradorProveedores(contabilidad, "proveedor");
 		 DecoradorCompras gestorCompras = new DecoradorCompras(gestorProveedores, "Compra");
 		 DecoradorCompras gestorCuentas = new DecoradorCompras(gestorCompras, "Cuenta");
 		 DecoradorRequisicion gestorRequisicion = new DecoradorRequisicion(gestorCuentas, "Requisicion");		 
 		 DecoradorCheques gestorCheques = new DecoradorCheques(gestorRequisicion, "Cheque");
 		 
+		 
+		Object registrarCuentasXPagar;
+		Object validaAprobacionCuentasXPagar;
+	   
+		 
 		 gestorProveedores.Print();
 		 gestorCompras.Print();
 		 gestorCuentas.Print();
 		 gestorRequisicion.Print();
 		 gestorCheques.Print();		 
-		 proveedor = (Proveedor) gestorProveedores.busca("Alfonso");
+		 proveedor = (Proveedor) gestorProveedores.busca("Nazir");
 		 proveedor.Print();
-		 compra = (Compra) gestorCompras.busca("Alfonso-compra-A");
+		 compra = (Compra) gestorCompras.busca("Nazir-compra-A");
 		 compra.Print();
-		 cuenta = (Cuenta) gestorCuentas.busca("Alfonso-compra-A-Cuenta-2");
+		 cuenta = (Cuenta) gestorCuentas.busca("Nazir-compra-A-Cuenta-2");
 		 cuenta.Print();
-		 requisicion = (Requisicion) gestorRequisicion.busca("Alfonso-compra-A-cuenta-1-Req-Cheques");
+		
+		 requisicion = (Requisicion) gestorRequisicion.busca("Nazir-compra-A-cuenta-1-Req-Cheques");
 		 requisicion.Print();
 		 //requisición.valida();
 		 requisicion.Print();
-		 cheque = (Cheque) gestorCheques.busca("Alfonso-compra-A-cuenta-1-Req-Cheques-ChequesX");
+		 cheque = (Cheque) gestorCheques.busca("Nazir-compra-A-cuenta-1-Req-Cheques-ChequesX");
 		 cheque.Print();
 		 
 		

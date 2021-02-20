@@ -86,4 +86,11 @@ public abstract class AGestor implements IGestor{
     	else
     		return null;
     }
+
+
+public void  registraCuentasXPagar()
+{
+
+		return;
+}
 }

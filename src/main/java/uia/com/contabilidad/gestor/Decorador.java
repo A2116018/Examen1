@@ -146,6 +146,24 @@ private void carga(String tipo, List<InfoUIA> subCatalogo, String nombre)
     	else
     		return null;
 	}
+	
+	public void registraCuentasXPagar() {
+		return;
+		
+	}
+	
+	public InfoUIA buscaCuentasxPagar() {
+		return gestor.busca(ancestro);
+	}
+	
+	public Object registra() {
+		return ancestro;
+	}
+	
+	public void validaCuentasXPagar() {
+		return;
+	}
+	
 
 
 	@Override

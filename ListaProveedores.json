@@ -3,7 +3,7 @@
     "id": 0,
     "items": [{
             "type": "proveedor",
-            "name": "Alfonso",
+            "name": "Nazir",
             "id": 1,
             "items": [{
                     "type": "compra",
@@ -83,7 +83,7 @@
             ]
         }, {
             "type": "proveedor",
-            "name": "Alfredo",
+            "name": "Nazir2",
             "id": 2,
             "items": [{
                     "type": "compra",
